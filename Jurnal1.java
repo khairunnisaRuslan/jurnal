@@ -5,6 +5,7 @@
  */
 package jurnal1;
 import java.util.Scanner;
+import java.util.ArrayList;
 /**
  *
  * @author Praktikum
@@ -18,14 +19,16 @@ public class Jurnal1 {
          System.out.print("Input:");
          Scanner input = new Scanner(System.in);
          int panjang = input.nextInt();
-         long jum=0;
+         ArrayList<Integer> elements = new ArrayList<>();
          for(int i=1;i<=panjang;i++){
-            jum=jum+fibo(i);
+             elements.add(fibo(i));
          }
-         System.out.println(jum);
+         for(int j=elements.size()-1;j>=0;j--){
+             System.out.print(elements.get(j));
+         }
     }
      
-    public static long fibo(int n) {
+    public static int fibo(int n) {
         if (n <= 1) {
             return n;
         }
