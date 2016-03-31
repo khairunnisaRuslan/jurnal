@@ -20,8 +20,8 @@ public class Jurnal1 {
          Scanner input = new Scanner(System.in);
          int panjang = input.nextInt();
          ArrayList<Integer> elements = new ArrayList<>();
-         for(int i=1;i<=panjang;i++){
-             elements.add(fibo(i));
+         for(int a=1;a<=panjang;a++){
+             elements.add(fibo(a));
          }
          for(int j=elements.size()-1;j>=0;j--){
              System.out.print(elements.get(j));
